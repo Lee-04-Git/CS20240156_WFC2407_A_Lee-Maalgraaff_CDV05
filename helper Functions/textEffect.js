@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentPhraseIndex = 0;
     let currentCharIndex = 0;
     let isDeleting = false;
-    const typingSpeed = 150;
-    const deletingSpeed = 100;
+    const typingSpeed = 100;
+    const deletingSpeed = 80;
     const typeContainer = homeSection.querySelector(".type-container");
 
     if (!typeContainer) {
