@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Information -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>My Skills - Lee Maalgraaff</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',  /* Custom color definition */
+          },
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-gray-200">
+
+  <!-- Navigation and Header Section -->
+  <div class="mx-auto bg-gray-900">
+    <!-- Main Navigation Header -->
+    <div class="relative flex items-center justify-between w-full px-4 py-4 shadow-md fixed top-0 z-50 bg-gray-900 transition-all duration-300">
+      
+      <!-- Logo -->
+      <a class="flex items-center space-x-2 text-xl font-bold text-gray-900">
+        <span class="text-blue-500"></span> <!-- Replace with your logo components -->
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden md:flex items-center space-x-8 text-sm text-green-400">
+        <a href="../index.html" class="hover:text-green-200"><strong>Home</strong></a>
+        <a href="./skills.html" class="hover:text-green-200"><strong>Experience</strong></a>
+        <a href="projects.html" class="hover:text-green-200"><strong>Projects</strong></a>
+      </div>
+
+      <!-- Theme Toggle Button (Light/Dark Mode) -->
+      <button class="text-gray-800 md:hidden">
+        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1M3 12H2M5.222 5.222l.707-.707M18.778 5.222l-.707-.707M21 12h-1M18.778 18.778l-.707-.707M12 21v-1M5.222 18.778l.707-.707" />
+        </svg>
+        <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1M3 12H2M5.222 5.222l.707-.707M18.778 5.222l-.707-.707M21 12h-1M18.778 18.778l-.707-.707M12 21v-1M5.222 18.778l.707-.707" />
+        </svg>
+      </button>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="md:hidden p-2" id="mobile-menu-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="hidden absolute top-full left-0 w-full bg-white shadow-lg md:hidden transition-all duration-300" id="mobile-menu">
+      <div class="flex flex-col items-start gap-4 p-4">
+        <a href="../index.html" class="text-sm text-gray-700 hover:text-blue-500">Home</a>
+        <a href="pages/skills.html" class="text-sm text-gray-700 hover:text-blue-500">Experience</a>
+        <a href="#projects" class="text-sm text-gray-700 hover:text-blue-500">Projects</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Me Section -->
+  <div class="about-me-section py-12 px-6 md:px-16 bg-gray-900 text-white">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
+
+      <!-- Left side: Image (with negative margin to move left) -->
+      <div class="about-img md:w-1/3 mb-8 md:mb-0 -ml-8 md:-ml-16">
+        <img src="your-image-url.jpg" alt="About Me Image" class="rounded-lg shadow-xl object-cover w-full h-64 md:h-80" />
+      </div>
+
+      <!-- Right side: Text -->
+      <div class="about-text md:w-2/3">
+        <h2 class="text-3xl font-semibold text-green-400 mb-4">About Me</h2>
+        <p class="text-lg text-gray-400 mb-4">
+          Over the last six months at Code Space, I’ve learned a lot about web development. I started with the basics like HTML, CSS, and JavaScript, then worked with Tailwind CSS to streamline my designs. I also got hands-on with Git, learning how to use it and its tools for version control. Most excitingly, I dove into React and began building interactive web apps.
+        </p>
+        <p class="text-lg text-gray-400">
+          This time has been an amazing learning experience, and I’m eager to keep growing as a developer, exploring new tools and technologies to create even better web experiences.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills Section -->
+<div class="skills-section py-12 px-6 md:px-16 bg-gray-900 text-white">
+  <div class="container mx-auto">
+    <!-- Section Header -->
+    <h2 class="text-3xl font-semibold text-green-400 text-center mb-8">My Skills</h2>
+    
+    <!-- Skill List -->
+    <div class="skills-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Skill 1 -->
+      <div class="skill-item flex items-center space-x-4">
+        <div class="skill-icon bg-green-400 p-3 rounded-full text-white">
+          <!-- Replace with your icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1M3 12H2M5.222 5.222l.707-.707M18.778 5.222l-.707-.707M21 12h-1M18.778 18.778l-.707-.707M12 21v-1M5.222 18.778l.707-.707" />
+          </svg>
+        </div>
+        <p class="text-lg text-gray-400">HTML</p>
+      </div>
+      
+      <!-- Skill 2 -->
+      <div class="skill-item flex items-center space-x-4">
+        <div class="skill-icon bg-green-400 p-3 rounded-full text-white">
+          <!-- Replace with your icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1M3 12H2M5.222 5.222l.707-.707M18.778 5.222l-.707-.707M21 12h-1M18.778 18.778l-.707-.707M12 21v-1M5.222 18.778l.707-.707" />
+          </svg>
+        </div>
+        <p class="text-lg text-gray-400">CSS</p>
+      </div>
+
+      <!-- Skill 3 -->
+      <div class="skill-item flex items-center space-x-4">
+        <div class="skill-icon bg-green-400 p-3 rounded-full text-white">
+          <!-- Replace with your icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1M3 12H2M5.222 5.222l.707-.707M18.778 5.222l-.707-.707M21 12h-1M18.778 18.778l-.707-.707M12 21v-1M5.222 18.778l.707-.707" />
+          </svg>
+        </div>
+        <p class="text-lg text-gray-400">JavaScript</p>
+      </div>
+
+      <!-- Skill 4 -->
+      <div class="skill-item flex items-center space-x-4">
+        <div class="skill-icon bg-green-400 p-3 rounded-full text-white">
+          <!-- Replace with your icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1M3 12H2M5.222 5.222l.707-.707M18.778 5.222l-.707-.707M21 12h-1M18.778 18.778l-.707-.707M12 21v-1M5.222 18.778l.707-.707" />
+          </svg>
+        </div>
+        <p class="text-lg text-gray-400">React</p>
+      </div>
+
+      <!-- Skill 5 -->
+      <div class="skill-item flex items-center space-x-4">
+        <div class="skill-icon bg-green-400 p-3 rounded-full text-white">
+          <!-- Replace with your icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1M3 12H2M5.222 5.222l.707-.707M18.778 5.222l-.707-.707M21 12h-1M18.778 18.778l-.707-.707M12 21v-1M5.222 18.778l.707-.707" />
+          </svg>
+        </div>
+        <p class="text-lg text-gray-400">TailwindCSS</p>
+      </div>
+
+      <!-- Skill 6 -->
+      <div class="skill-item flex items-center space-x-4">
+        <div class="skill-icon bg-green-400 p-3 rounded-full text-white">
+          <!-- Replace with your icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1M3 12H2M5.222 5.222l.707-.707M18.778 5.222l-.707-.707M21 12h-1M18.778 18.778l-.707-.707M12 21v-1M5.222 18.778l.707-.707" />
+          </svg>
+        </div>
+        <p class="text-lg text-gray-400">Git</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Head Content -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>My Projects - Lee Maalgraaff</title>
+
+  <!-- External Scripts -->
+  <script src="helper functions/textEffect.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+        .fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    }
+
+    .fade-in.visible {
+    opacity: 1;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-200">
+
+  <!-- COMPONENT 1: Navigation and Header -->
+  <div class="mx-auto bg-gray-900">
+    <!-- Main Navigation Header -->
+    <div class="relative flex items-center justify-between w-full px-4 py-4 shadow-md fixed top-0 z-50 bg-gray-900 transition-all duration-300">
+      
+      <!-- Logo -->
+      <a class="flex items-center space-x-2 text-xl font-bold text-gray-900">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden md:flex items-center space-x-8 text-sm text-green-400">
+        <a href="../index.html" class="hover:text-green-200"><strong>Home</strong></a>
+        <a href="skills.html" class="hover:text-green-200"><strong>Experience</strong></a>
+        <a href="#projects" class="hover:text-green-200"><strong>Projects</strong></a>
+      </div>
+
+      <!-- Theme Toggle Button (Light/Dark Mode) -->
+      <button class="text-gray-800 md:hidden">
+        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1M3 12H2M5.222 5.222l.707-.707M18.778 5.222l-.707-.707M21 12h-1M18.778 18.778l-.707-.707M12 21v-1M5.222 18.778l.707-.707" />
+        </svg>
+        <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1M3 12H2M5.222 5.222l.707-.707M18.778 5.222l-.707-.707M21 12h-1M18.778 18.778l-.707-.707M12 21v-1M5.222 18.778l.707-.707" />
+        </svg>
+      </button>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="md:hidden p-2" id="mobile-menu-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="hidden absolute top-full left-0 w-full bg-white shadow-lg md:hidden transition-all duration-300" id="mobile-menu">
+      <div class="flex flex-col items-start gap-4 p-4">
+        <a href="../index.html" class="text-sm text-gray-700 hover:text-blue-500">Home</a>
+        <a href="experience" class="text-sm text-gray-700 hover:text-blue-500">Experience</a>
+        <a href="#projects" class="text-sm text-gray-700 hover:text-blue-500">Projects</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPONENT 2: Projects Section -->
+  <section class="project-section py-12 px-4 md:px-8 bg-gray-900">
+    <div class="container mx-auto text-center">
+      <h1 class="text-3xl font-bold mb-4 text-gray-200">
+        My Recent <span class="text-green-400">Works</span>
+      </h1>
+      <p class="mb-8 text-gray-400">Here are a few projects I've worked on recently.</p>
+
+      <!-- Project Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+     <!-- Project Card 1 -->
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-md relative">
+    <!-- Image with blur effect -->
+    <img src="../img/Forkify.jpeg" alt="Recipe App" class="rounded mb-4 w-full h-64 object-cover filter blur-sm">
+    
+    <!-- Dark overlay to enhance contrast -->
+    <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+    
+    <!-- Project Content -->
+    <div class="relative z-10 text-gray-400">
+      <h2 class="text-2xl font-semibold text-green-400">Recipe App</h2>
+      <p class="text-sm mb-4">A recipe search app built using JavaScript. This app allows users to search for recipes based on ingredients, and view detailed instructions for preparation. Built with the Forkify API for fetching recipes and displaying them dynamically.</p>
+      <a href="https://github.com/Lee-04-Git/forkify-project-app" target="_blank" class="text-green-200 hover:underline">GitHub</a>
+    </div>
+  </div>
+  
+
+       <!-- Project Card 2 -->
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-md relative">
+    <!-- Image with blur effect -->
+    <img src="../img/Task-Management-App.jpeg" alt="Task Management App" class="rounded mb-4 w-full h-64 object-cover filter blur-sm">
+    
+    <!-- Dark overlay to enhance contrast -->
+    <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+    
+    <!-- Project Content -->
+    <div class="relative z-10 text-gray-400">
+      <h2 class="text-2xl font-semibold text-green-400">Task Management App</h2>
+      <p class="text-sm mb-4">A task management application built using JavaScript. Users can add, remove, and manage tasks with ease, while also ensuring there are no duplicates in the task list. The app features a clean, simple interface that helps users stay organized and on track.</p>
+      <a href="https://github.com/Lee-04-Git/JSL_Portfolio_Piece_CS20240156_WFC07_A_Lee-Maalgraaff_JSL11" target="_blank" class="text-green-200 hover:underline">GitHub</a> 
+    </div>
+  </div>
+  
+
+   <!-- Project Card 3 -->
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-md relative">
+    <!-- Image with blur effect -->
+    <img src="../img/Cache-Bank-Landing-Page.jpeg" alt="Task Management App" class="rounded mb-4 w-full h-64 object-cover filter blur-sm">
+    
+    <!-- Dark overlay to enhance contrast -->
+    <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+    
+    <!-- Project Content -->
+    <div class="relative z-10 text-gray-400">
+      <h2 class="text-2xl font-semibold text-green-400">Cache Bank Landing Page</h2>
+      <p class="text-sm mb-4">A clean and responsive landing page for Cache Bank, built with Tailwind CSS and JavaScript. The design highlights the bank’s services and offers, with interactive elements for a smooth user experience on both desktop and mobile devices</p>
+      <a href="https://github.com/Lee-04-Git/SDF_Portfolio_Piece_CS20240156_WFC07_A_Lee-Maalgraaff_SDF11_R" target="_blank" class="text-green-200 hover:underline">GitHub</a>
+    </div>
+  </div>
+  
+         <!-- Project Card 4 -->
+<div class="project-card bg-gray-800 p-6 rounded-lg shadow-md relative">
+    <!-- Image with blur effect -->
+    <img src="../img/movieApp.jpeg" alt="Movie-App" class="rounded mb-4 w-full h-64 object-cover filter blur-sm">
+    
+    <!-- Dark overlay to enhance contrast -->
+    <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+    
+    <!-- Project Content -->
+    <div class="relative z-10 text-gray-400">
+      <h2 class="text-2xl font-semibold text-green-400">Movie App</h2>
+      <p class="text-sm mb-4">A mobile app built with the Ionic framework, featuring an infinite scroll of movie listings. Utilizes a movie API to display trending films and their details. Users can explore categories, ratings, release dates, and trailers for enhanced discovery.</p>
+      <a href="https://github.com/Lee-04-Git/SDF_Portfolio_Piece_CS20240156_WFC07_A_Lee-Maalgraaff_SDF11_R" target="_blank" class="text-green-200 hover:underline">GitHub</a>
+    </div>
+  </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPONENT 3: Footer -->
+  <footer class="bg-gray-900 py-4">
+    <div class="text-center text-gray-400">
+        <p>&#169; 2024 Lee Maalgraaff. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- External Scripts (Mobile Menu Toggle, Dark Mode) -->
+  <script>
+    document.getElementById("mobile-menu-toggle").addEventListener("click", function () {
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Dark/Light mode toggle logic
+    const moonIcon = document.getElementById("moon-icon");
+    const sunIcon = document.getElementById("sun-icon");
+
+    moonIcon.addEventListener("click", function () {
+      document.body.classList.add("dark");
+      moonIcon.classList.add("hidden");
+      sunIcon.classList.remove("hidden");
+    });
+
+    sunIcon.addEventListener("click", function () {
+      document.body.classList.remove("dark");
+      sunIcon.classList.add("hidden");
+      moonIcon.classList.remove("hidden");
+    });
+  </script>
+
+</body>
+
+</html>
